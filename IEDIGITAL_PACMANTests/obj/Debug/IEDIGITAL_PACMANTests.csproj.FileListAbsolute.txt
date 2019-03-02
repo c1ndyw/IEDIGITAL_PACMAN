@@ -1,0 +1,17 @@
+C:\Users\CINDY\Desktop\IEDIGITAL_PACMAN\IEDIGITAL_PACMANTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\CINDY\Desktop\IEDIGITAL_PACMAN\IEDIGITAL_PACMANTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\CINDY\Desktop\IEDIGITAL_PACMAN\IEDIGITAL_PACMANTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\CINDY\Desktop\IEDIGITAL_PACMAN\IEDIGITAL_PACMANTests\bin\Debug\IEDIGITAL_PACMANTests.dll
+C:\Users\CINDY\Desktop\IEDIGITAL_PACMAN\IEDIGITAL_PACMANTests\bin\Debug\IEDIGITAL_PACMANTests.pdb
+C:\Users\CINDY\Desktop\IEDIGITAL_PACMAN\IEDIGITAL_PACMANTests\bin\Debug\IEDIGITAL_PACMAN.exe
+C:\Users\CINDY\Desktop\IEDIGITAL_PACMAN\IEDIGITAL_PACMANTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\CINDY\Desktop\IEDIGITAL_PACMAN\IEDIGITAL_PACMANTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\CINDY\Desktop\IEDIGITAL_PACMAN\IEDIGITAL_PACMANTests\bin\Debug\IEDIGITAL_PACMAN.pdb
+C:\Users\CINDY\Desktop\IEDIGITAL_PACMAN\IEDIGITAL_PACMANTests\bin\Debug\IEDIGITAL_PACMAN.exe.config
+C:\Users\CINDY\Desktop\IEDIGITAL_PACMAN\IEDIGITAL_PACMANTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\CINDY\Desktop\IEDIGITAL_PACMAN\IEDIGITAL_PACMANTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\CINDY\Desktop\IEDIGITAL_PACMAN\IEDIGITAL_PACMANTests\obj\Debug\IEDIGITAL_PACMANTests.csprojAssemblyReference.cache
+C:\Users\CINDY\Desktop\IEDIGITAL_PACMAN\IEDIGITAL_PACMANTests\obj\Debug\IEDIGITAL_PACMANTests.csproj.CoreCompileInputs.cache
+C:\Users\CINDY\Desktop\IEDIGITAL_PACMAN\IEDIGITAL_PACMANTests\obj\Debug\IEDIGITAL_PACMANTests.csproj.CopyComplete
+C:\Users\CINDY\Desktop\IEDIGITAL_PACMAN\IEDIGITAL_PACMANTests\obj\Debug\IEDIGITAL_PACMANTests.dll
+C:\Users\CINDY\Desktop\IEDIGITAL_PACMAN\IEDIGITAL_PACMANTests\obj\Debug\IEDIGITAL_PACMANTests.pdb
