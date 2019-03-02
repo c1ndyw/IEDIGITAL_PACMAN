@@ -7,7 +7,6 @@ using System.Text.RegularExpressions;
 
 namespace IEDIGITAL_PACMAN
 {      
- 
     class Program
         {
         static void Main(string[] args)
@@ -22,33 +21,27 @@ namespace IEDIGITAL_PACMAN
             /// </summary>
             Boolean firstTime = true;
             Console.WriteLine("*.................Welcome to Pacman 5x5..................*");
-            do
-            {
+            do {
                 userCommand = (Console.ReadLine()).ToUpper();
-                if (firstTime)
+                String pattern = @"PLACE\s[0-4]\,[0-4]\,([NORTH]*|[EAST]*|[WEST]*|[SOUTH]*)$";
+                if (Regex.Match(userCommand, pattern, RegexOptions.IgnoreCase).Success)
                 {
-                    String pattern = @"PLACE\s[0-4]\,[0-4]\,([NORTH]*|[EAST]*|[WEST]*|[SOUTH]*)$";
-                    if (Regex.Match(userCommand, pattern, RegexOptions.IgnoreCase).Success)
-                    {
                         //Console.WriteLine("regex entered");
                         String[] Place_keyword = userCommand.Split(' ');
                         string[] placeWords = Place_keyword[1].Split(',');
                         if ((Convert.ToInt16(placeWords[0]) > -1 && Convert.ToInt16(placeWords[0]) < 5) &&
-                            (Convert.ToInt16(placeWords[1]) > -1 && Convert.ToInt16(placeWords[1]) < 5))
-                        {
+                            (Convert.ToInt16(placeWords[1]) > -1 && Convert.ToInt16(placeWords[1]) < 5)) {
                             int corX = Convert.ToInt16(placeWords[0]);
                             int corY = Convert.ToInt16(placeWords[1]);
                             String direction = placeWords[2];
                             //  Console.WriteLine("PLACING THE Pacman");
                             _grid.Place(_pacman, corX, corY, direction);
-                            firstTime = !firstTime;
-                        }
-                    }
-                    else {
-                        Console.Clear();
-                    }
-                }
-                else
+                            if (firstTime) {
+                                firstTime = false;
+                            } 
+                         }
+                }  
+                if (!firstTime)
                 {
                     if (userCommand == "MOVE")
                     {
@@ -58,19 +51,18 @@ namespace IEDIGITAL_PACMAN
                     {
                         _grid.RotateLeft(_pacman);
                     }
-                   
+
                     if (userCommand == "RIGHT")
                     {
                         _grid.RotateRight(_pacman);
                     }
-                   
+
                     if (userCommand == "REPORT")
                     {
                         _grid.Report(_pacman);
                     }
-                 
                 }
             } while (userCommand != "EXIT");
         }
-        }
-    }
+     }
+}
