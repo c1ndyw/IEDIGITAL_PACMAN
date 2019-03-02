@@ -33,11 +33,11 @@ namespace IEDIGITAL_PACMAN
         /// <param name="newY">y coordinate</param>
         /// <param name="newDir">direction of pacman</param>
         /// <param name="p">the pacman</param>
-        public void place(Pacman p, int newX, int newY, String newDir)
+        public void Place(Pacman p, int newX, int newY, String newDir)
         {
-            p.setPacmanX(newX);
-            p.setPacmanY(newY);
-            p.setPacmanDir(newDir);
+            p.SetPacmanX(newX);
+            p.SetPacmanY(newY);
+            p.SetPacmanDir(newDir);
         }
 
         /// <summary>
@@ -45,33 +45,33 @@ namespace IEDIGITAL_PACMAN
         /// depending the pacman's direction
         /// </summary>
         /// <param name="p">the pacman</param>
-        public void move(Pacman p)
+        public void Move(Pacman p)
         {
-            Direction currentDirection = p.getDirection();
+            Direction currentDirection = p.GetDirection();
             switch (currentDirection)
             {
                 case Direction.NORTH:
                     if (p.PacmanY() + 1 < width)
                     {
-                        p.setPacmanY(p.PacmanY() + 1);
+                        p.SetPacmanY(p.PacmanY() + 1);
                     }
                     break;
                 case Direction.EAST:
                     if (p.PacmanX() + 1 < width)
                     {
-                        p.setPacmanX(p.PacmanX() + 1);
+                        p.SetPacmanX(p.PacmanX() + 1);
                     }
                     break;
                 case Direction.SOUTH:
                     if (p.PacmanY() - 1 > -1)
                     {
-                        p.setPacmanY(p.PacmanY() - 1);
+                        p.SetPacmanY(p.PacmanY() - 1);
                     }
                     break;
                 case Direction.WEST:
                     if (p.PacmanX() - 1 > -1)
                     {
-                        p.setPacmanX(p.PacmanX() - 1);
+                        p.SetPacmanX(p.PacmanX() - 1);
                     }
                     break;
             }
@@ -82,9 +82,9 @@ namespace IEDIGITAL_PACMAN
         /// to the left with the left orders : NORTH - WEST - SOUTH - EAST
         /// </summary>
         /// <param name="p">the pacman</param>
-        public void rotateLeft(Pacman p)
+        public void RotateLeft(Pacman p)
         {
-            Direction _direction = p.getDirection();
+            Direction _direction = p.GetDirection();
             switch (_direction)
             {
                 case Direction.NORTH:
@@ -94,7 +94,7 @@ namespace IEDIGITAL_PACMAN
                     _direction = _direction - 1;
                     break;
             }
-            p.setPacmanDir(_direction.ToString());
+            p.SetPacmanDir(_direction.ToString());
 
         }
 
@@ -103,9 +103,9 @@ namespace IEDIGITAL_PACMAN
         /// to the right with the right orders : NORTH - EAST - SOUTH - WEST
         /// </summary>
         /// <param name="p">the pacman</param>
-        public void rotateRight(Pacman p)
+        public void RotateRight(Pacman p)
         {
-            Direction _direction = p.getDirection();
+            Direction _direction = p.GetDirection();
             switch (_direction)
             {
                 case Direction.WEST:
@@ -115,14 +115,14 @@ namespace IEDIGITAL_PACMAN
                     _direction = _direction + 1;
                     break;
             }
-            p.setPacmanDir(_direction.ToString());
+            p.SetPacmanDir(_direction.ToString());
         }
 
         /// <summary>
         /// Display current state (coordinate and direction) of the pacman in the grid.
         /// </summary>
         /// <param name="p">the pacman</param>
-        public void report(Pacman p)
+        public void Report(Pacman p)
         {
             Console.WriteLine("OUTPUT: " + p.PacmanX().ToString() + "," + p.PacmanY().ToString() + "," + p.PacmanDirection().ToString());
         }

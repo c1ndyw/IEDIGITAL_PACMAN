@@ -40,7 +40,7 @@ namespace IEDIGITAL_PACMAN
                             int corY = Convert.ToInt16(placeWords[1]);
                             String direction = placeWords[2];
                             //  Console.WriteLine("PLACING THE Pacman");
-                            _grid.place(_pacman, corX, corY, direction);
+                            _grid.Place(_pacman, corX, corY, direction);
                             firstTime = !firstTime;
                         }
                     }
@@ -52,21 +52,21 @@ namespace IEDIGITAL_PACMAN
                 {
                     if (userCommand == "MOVE")
                     {
-                        _grid.move(_pacman);
+                        _grid.Move(_pacman);
                     }
                     if (userCommand == "LEFT")
                     {
-                        _grid.rotateLeft(_pacman);
+                        _grid.RotateLeft(_pacman);
                     }
                    
                     if (userCommand == "RIGHT")
                     {
-                        _grid.rotateRight(_pacman);
+                        _grid.RotateRight(_pacman);
                     }
                    
                     if (userCommand == "REPORT")
                     {
-                        _grid.report(_pacman);
+                        _grid.Report(_pacman);
                     }
                  
                 }

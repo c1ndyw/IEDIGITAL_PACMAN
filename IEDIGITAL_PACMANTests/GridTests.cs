@@ -17,7 +17,7 @@ namespace IEDIGITAL_PACMAN.Tests
         
 
         [TestMethod()]
-        public void unmatchingPattern_placeKeyword()
+        public void UnmatchingPattern_placeKeyword()
         {
             Boolean matchingPattern = false;
             String keyword = "PLACE 1,5,EA";
@@ -40,7 +40,7 @@ namespace IEDIGITAL_PACMAN.Tests
         }
 
         [TestMethod()]
-        public void matchingRegex_placeKeyword()
+        public void MatchingRegex_placeKeyword()
         {
             Boolean matchingPattern = false;
             String keyword = "PLACE 1,2,WEST";
@@ -64,11 +64,11 @@ namespace IEDIGITAL_PACMAN.Tests
      
 
         [TestMethod()]
-        public void moveTest()
+        public void MoveTest()
         {
-            _pacman.setPacmanX (3);
-            _pacman.setPacmanY(2);
-            _pacman.setPacmanDir("WEST");
+            _pacman.SetPacmanX (3);
+            _pacman.SetPacmanY(2);
+            _pacman.SetPacmanDir("WEST");
             Direction currentDirection = Direction.WEST;
             switch (currentDirection)
             {
@@ -76,34 +76,34 @@ namespace IEDIGITAL_PACMAN.Tests
                 case Direction.NORTH:
                     if (_pacman.PacmanY() + 1 < 5)
                     {
-                        _pacman.setPacmanY(_pacman.PacmanY() + 1);
+                        _pacman.SetPacmanY(_pacman.PacmanY() + 1);
                     }
                     break;
                 case Direction.EAST:
                     if (_pacman.PacmanX() + 1 < 5)
                     {
-                        _pacman.setPacmanX(_pacman.PacmanX() + 1);
+                        _pacman.SetPacmanX(_pacman.PacmanX() + 1);
                     }
                     break;
                 case Direction.SOUTH:
                     if (_pacman.PacmanY() - 1 > -1)
                     {
-                        _pacman.setPacmanY(_pacman.PacmanY() - 1);
+                        _pacman.SetPacmanY(_pacman.PacmanY() - 1);
                     }
                     break;
                 case Direction.WEST:
                     if (_pacman.PacmanX() - 1 > -1)
                     {
-                        _pacman.setPacmanX(_pacman.PacmanX() - 1);
+                        _pacman.SetPacmanX(_pacman.PacmanX() - 1);
                     }
                     break;
             }
-            String result = _pacman.PacmanX().ToString() + "," + _pacman.PacmanY().ToString() + ","+ _pacman.getDirectionString();
+            String result = _pacman.PacmanX().ToString() + "," + _pacman.PacmanY().ToString() + ","+ _pacman.GetDirectionString();
             Assert.AreEqual("2,2,WEST", result);
         }
 
         [TestMethod()]
-        public void rotateLeftTest()
+        public void RotateLeftTest()
         {
             Direction _direction = Direction.SOUTH;
             switch (_direction)
@@ -115,12 +115,12 @@ namespace IEDIGITAL_PACMAN.Tests
                     _direction = _direction - 1;
                     break;
             }
-            _pacman.setPacmanDir(_direction.ToString());
-            Assert.AreEqual(Direction.EAST, _pacman.getDirection());
+            _pacman.SetPacmanDir(_direction.ToString());
+            Assert.AreEqual(Direction.EAST, _pacman.GetDirection());
         }
 
         [TestMethod()]
-        public void rotateRightTest()
+        public void RotateRightTest()
         {
             Direction _direction = Direction.NORTH;
             switch (_direction)
@@ -132,15 +132,15 @@ namespace IEDIGITAL_PACMAN.Tests
                     _direction = _direction + 1;
                     break;
             }
-            _pacman.setPacmanDir(_direction.ToString());
-            Assert.AreEqual(Direction.EAST, _pacman.getDirection());
+            _pacman.SetPacmanDir(_direction.ToString());
+            Assert.AreEqual(Direction.EAST, _pacman.GetDirection());
         }
 
         [TestMethod()]
-        public void reportTest()
+        public void ReportTest()
         {
-            _grid.move(_pacman);
-            _grid.move(_pacman);
+            _grid.Move(_pacman);
+            _grid.Move(_pacman);
             String expected = "OUTPUT: 0,2,NORTH";
             string result = "OUTPUT: " + _pacman.PacmanX().ToString() + "," + _pacman.PacmanY().ToString() + "," + _pacman.PacmanDirection().ToString();
             Assert.AreEqual(expected,result);

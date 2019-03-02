@@ -57,7 +57,7 @@ namespace IEDIGITAL_PACMAN
         /// Sets the x coordinate of pacman
         /// </summary>
         /// <value>The number between 0-4</value>
-        public void setPacmanX(int x)
+        public void SetPacmanX(int x)
         {
             this.X = x;
         }
@@ -66,7 +66,7 @@ namespace IEDIGITAL_PACMAN
         /// Sets the y coordinate of pacman
         /// </summary>
         /// <value>The number between 0-4</value>
-        public void setPacmanY(int y)
+        public void SetPacmanY(int y)
         {
             this.Y = y;
         }
@@ -75,7 +75,7 @@ namespace IEDIGITAL_PACMAN
         /// Sets the direction of pacman
         /// </summary>
         /// <value>The enum direction : NORTH,EAST,SOUTH,WEST</value>
-        public void setPacmanDir(String direction)
+        public void SetPacmanDir(String direction)
         {
             this.direction = direction;
         }
@@ -84,7 +84,7 @@ namespace IEDIGITAL_PACMAN
         /// The direction in enum data type of the pacman
         /// </summary>
         /// <returns>the direction of the pacman</returns>
-        public Direction getDirection()
+        public Direction GetDirection()
         {
             Direction _direction;
             Enum.TryParse(direction, out _direction);
@@ -95,7 +95,7 @@ namespace IEDIGITAL_PACMAN
         /// The direction in string data type of the pacman
         /// </summary>
         /// <returns>the direction of the pacman</returns>
-        public String getDirectionString()
+        public String GetDirectionString()
         {
             return direction;
         }
