@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27703.2047
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IEDIGITAL_PACMAN", "IEDIGITAL_PACMAN\IEDIGITAL_PACMAN.csproj", "{34CE0E64-EAC5-4650-B26B-597461977752}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IEDIGITAL_PACMANTests", "IEDIGITAL_PACMANTests\IEDIGITAL_PACMANTests.csproj", "{6FCEBE65-3A1C-4170-86DE-93530E81B05A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{34CE0E64-EAC5-4650-B26B-597461977752}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{34CE0E64-EAC5-4650-B26B-597461977752}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{34CE0E64-EAC5-4650-B26B-597461977752}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FCEBE65-3A1C-4170-86DE-93530E81B05A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FCEBE65-3A1C-4170-86DE-93530E81B05A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FCEBE65-3A1C-4170-86DE-93530E81B05A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FCEBE65-3A1C-4170-86DE-93530E81B05A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

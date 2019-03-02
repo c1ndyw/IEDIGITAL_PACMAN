@@ -19,11 +19,11 @@ namespace IEDIGITAL_PACMAN
         /// <summary>
         /// Pacman constructor, has a x and y coordinate, and direction
         /// </summary>
-        public Pacman(string direction)
+        public Pacman()
         {
             this.X = 0;
             this.Y = 0;
-            this.direction = direction;
+            this.direction = "NORTH";
         }
 
         /// <summary>
