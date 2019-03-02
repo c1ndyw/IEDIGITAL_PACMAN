@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Text.RegularExpressions;
 namespace IEDIGITAL_PACMAN
 {      
  
@@ -14,25 +14,28 @@ namespace IEDIGITAL_PACMAN
             Grid _grid = new Grid();
             Pacman _pacman = new Pacman("NORTH");
             String userCommand;
-            Console.WriteLine("Welcome to Pacman 5x5");
+            Console.WriteLine("*.................Welcome to Pacman 5x5..................*");
+
             do
             {
-                userCommand = Console.ReadLine();
-                string[] placeWords = userCommand.Split(',');
-
-                if (userCommand.Contains(',')) {
+                userCommand = (Console.ReadLine()).ToUpper();
+                String pattern = @"PLACE\s[0-4]\,[0-4]\,([NORTH]*|[EAST]*|[WEST]*|[SOUTH]*)$";
+                if(Regex.Match(userCommand, pattern, RegexOptions.IgnoreCase).Success){
+                    //Console.WriteLine("regex entered");
+                    String[] Place_keyword = userCommand.Split(' ');
+                    string[] placeWords = Place_keyword[1].Split(',');
                     if (
-                        ( Convert.ToInt16(placeWords[1]) >-1 && Convert.ToInt16(placeWords[1]) < 5) && 
-                        (Convert.ToInt16(placeWords[2]) > -1 && Convert.ToInt16(placeWords[2]) < 5)
+                        (Convert.ToInt16(placeWords[0]) > -1 && Convert.ToInt16(placeWords[0]) < 5) &&
+                        (Convert.ToInt16(placeWords[1]) > -1 && Convert.ToInt16(placeWords[1]) < 5)
                         )
-                        {
-                            int corX = Convert.ToInt16(placeWords[1]);
-                            int corY = Convert.ToInt16(placeWords[2]);
-                            String direction = placeWords[3];
-                          //  Console.WriteLine("PLACING THE Pacman");
-                             _grid.place(_pacman, corX, corY,direction);
-                        }
-                       //  Console.WriteLine("contain coma");
+                    {
+                        int corX = Convert.ToInt16(placeWords[0]);
+                        int corY = Convert.ToInt16(placeWords[1]);
+                        String direction = placeWords[2];
+                        //  Console.WriteLine("PLACING THE Pacman");
+                        _grid.place(_pacman, corX, corY, direction);
+                       
+                    }
                 }
                 if (userCommand == "MOVE")
                 {
